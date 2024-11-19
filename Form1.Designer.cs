@@ -30,103 +30,61 @@
         {
             button1 = new Button();
             textBox1 = new TextBox();
-            button2 = new Button();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
-            checkBox3 = new CheckBox();
-            checkBox4 = new CheckBox();
-            checkBox5 = new CheckBox();
+            textBox2 = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
             SuspendLayout();
             // 
             // button1
             // 
-            button1.Location = new Point(428, 242);
+            button1.Location = new Point(557, 46);
             button1.Name = "button1";
-            button1.Size = new Size(419, 95);
+            button1.Size = new Size(188, 104);
             button1.TabIndex = 0;
             button1.Text = "Старт";
             button1.UseVisualStyleBackColor = true;
-            button1.Click += StartButtonEvent;
+            button1.Click += StartProgram;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(23, 12);
-            textBox1.Multiline = true;
+            textBox1.Location = new Point(24, 46);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(399, 426);
+            textBox1.Size = new Size(479, 27);
             textBox1.TabIndex = 1;
             // 
-            // button2
+            // textBox2
             // 
-            button2.Location = new Point(428, 343);
-            button2.Name = "button2";
-            button2.Size = new Size(419, 95);
-            button2.TabIndex = 2;
-            button2.Text = "Стоп";
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += StopButtonEvent;
+            textBox2.Location = new Point(24, 123);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(479, 27);
+            textBox2.TabIndex = 2;
             // 
-            // checkBox1
+            // label1
             // 
-            checkBox1.AutoSize = true;
-            checkBox1.Location = new Point(437, 14);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(287, 24);
-            checkBox1.TabIndex = 4;
-            checkBox1.Text = "Посчитать количество предложений";
-            checkBox1.UseVisualStyleBackColor = true;
+            label1.AutoSize = true;
+            label1.Location = new Point(24, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(117, 20);
+            label1.TabIndex = 3;
+            label1.Text = "Путь источника";
             // 
-            // checkBox2
+            // label2
             // 
-            checkBox2.AutoSize = true;
-            checkBox2.Location = new Point(437, 44);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(408, 24);
-            checkBox2.TabIndex = 5;
-            checkBox2.Text = "Посчитать количество вопросительных предложений";
-            checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            checkBox3.AutoSize = true;
-            checkBox3.Location = new Point(437, 74);
-            checkBox3.Name = "checkBox3";
-            checkBox3.Size = new Size(421, 24);
-            checkBox3.TabIndex = 6;
-            checkBox3.Text = "Посчитать количество восклицаательных предложений";
-            checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            checkBox4.AutoSize = true;
-            checkBox4.Location = new Point(437, 104);
-            checkBox4.Name = "checkBox4";
-            checkBox4.Size = new Size(222, 24);
-            checkBox4.TabIndex = 7;
-            checkBox4.Text = "Посчитать количество слов";
-            checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            checkBox5.AutoSize = true;
-            checkBox5.Location = new Point(437, 134);
-            checkBox5.Name = "checkBox5";
-            checkBox5.Size = new Size(259, 24);
-            checkBox5.TabIndex = 8;
-            checkBox5.Text = "Посчитать количество символов";
-            checkBox5.UseVisualStyleBackColor = true;
+            label2.AutoSize = true;
+            label2.Location = new Point(24, 100);
+            label2.Name = "label2";
+            label2.Size = new Size(124, 20);
+            label2.TabIndex = 4;
+            label2.Text = "Путь приемника";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(859, 450);
-            Controls.Add(checkBox5);
-            Controls.Add(checkBox4);
-            Controls.Add(checkBox3);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
-            Controls.Add(button2);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(button1);
             Name = "Form1";
@@ -139,11 +97,8 @@
 
         private Button button1;
         private TextBox textBox1;
-        private Button button2;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
-        private CheckBox checkBox3;
-        private CheckBox checkBox4;
-        private CheckBox checkBox5;
+        private TextBox textBox2;
+        private Label label1;
+        private Label label2;
     }
 }
