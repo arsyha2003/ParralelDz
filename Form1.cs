@@ -18,6 +18,7 @@ namespace ParralelDz
         {
             cts = new CancellationTokenSource();    
             text = textBox1.Text;
+            string messageBoxText=string.Empty;
             List<Task> tasks = new List<Task>();
             if (checkBox1.Checked) tasks.Add(Task.Run(() => countOfSentences = text.Count(x => x.ToString() == "?" || x.ToString() == "!" || x.ToString() == "."), cts.Token));
             if (checkBox2.Checked) tasks.Add(Task.Run(() => countOfAskSentences = text.Count(x => x.ToString() == "?"), cts.Token));
@@ -34,11 +35,13 @@ namespace ParralelDz
                 }
             }, cts.Token));
             Task.WaitAll(tasks.ToArray());
-            MessageBox.Show($"Количество предложений: {countOfSentences}\n" +
-                $"Количество восклицательных предложений: {countOfExclamationSentences}\n" +
-                $"Количество вопросительных предложений: {countOfAskSentences}\n" +
-                $"Количество слов: {countOfWords}\n" +
-                $"Количество символов: {countOfSymbols}\n");
+            if (checkBox1.Checked) messageBoxText += $"Количество предложений: {countOfSentences}\n";
+            if (checkBox2.Checked) messageBoxText += $"Количество вопросительных предложений: {countOfExclamationSentences}\n";
+            if (checkBox3.Checked) messageBoxText += $"Количество восклицательных предложений: {countOfExclamationSentences}\n";
+            if (checkBox4.Checked) messageBoxText += $"Количество слов: {countOfWords}\n";
+            if (checkBox5.Checked) messageBoxText += $"Количество символов: {countOfSymbols}\n";
+            //Повтор кода это нехорошо, но такое решение мне больше всего нравится
+            MessageBox.Show(messageBoxText,string.Empty,MessageBoxButtons.OK);
             countOfSymbols = 0;
             countOfWords = 0;
             countOfSentences = 0;
